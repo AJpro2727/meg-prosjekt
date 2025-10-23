@@ -5,27 +5,28 @@ html {
 }
 
 :root {
-  --bg: #0b0f14; 
-  --text: #e8eef7; 
-  --muted: #8a99b2; 
-  --accent: #4ea8de; 
+  --bg: #0b0f14;
+  --text: #e8eef7;
+  --muted: #8a99b2;
+  --accent: #4ea8de;
   --border: rgba(255, 255, 255, 0.08);
-
-
   --bg-hero-start: #0b0f14;
   --bg-hero-end: #0f1b2d;
   --bg-intro-start: #0a121b;
-  --bg-intro-end: #101a26;
+  --bg-intro-end: #0c1c30;
   --accent-2: #61dafb;
-  --accent-3: #a4ffdf;
-  --surface: #121a24; 
-  --ring: rgba(78, 168, 222, 0.35);
   --shadow: rgba(0, 0, 0, 0.35);
 
-
-  --grad-hero: linear-gradient(135deg, var(--bg-hero-start) 0%, var(--bg-hero-end) 100%);
-  --grad-intro: linear-gradient(180deg, var(--bg-intro-start) 0%, var(--bg-intro-end) 100%);
-
+  --grad-hero: linear-gradient(
+    135deg,
+    var(--bg-hero-start) 0%,
+    var(--bg-hero-end) 100%
+  );
+  --grad-intro: linear-gradient(
+    180deg,
+    var(--bg-intro-start) 0%,
+    var(--bg-intro-end) 100%
+  );
 }
 
 *,
@@ -62,7 +63,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+/* NAV */
 nav {
   padding: 20px;
   display: flex;
@@ -96,6 +97,64 @@ nav a {
 nav a:hover {
   color: var(--accent);
 }
+/* NAV END */
+/* FOOTER */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-intro-end);
+  color: var(--text);
+  padding: 5rem 3rem;
+  border-top: 1px solid var(--accent);
+  font-size: 0.95rem;
+}
+
+.footer-left a {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0;
+  text-decoration: none;
+}
+
+.footer-center {
+  text-align: center;
+  flex: 1;
+  color: var(--muted);
+}
+
+.footer-right {
+  text-align: left;
+}
+
+.footer-right h4 {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-right ul {
+  list-style: none;
+}
+
+.footer-right li {
+  margin: 0.2rem 0;
+}
+
+.footer-right a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+/* FOOTER END  */
 
 .actions {
   display: flex;
@@ -217,4 +276,80 @@ img {
   margin-left: 6rem;
   border-radius: 6rem;
   border: 2px solid var(--accent);
+}
+
+/* INTERESSER */
+.interesser {
+  background: var(--grad-intro);       
+  color: var(--text);
+  padding: 4rem 1.5rem;
+}
+
+.interesser h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.25rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+
+.interesse-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2rem;                       
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.interesse-grid .txt-box,
+.interesse-grid .img-box {
+  border-radius: 1rem;
+}
+
+
+.interesse-grid .txt-box {
+  background-color: rgba(18, 26, 36, 0.72);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px var(--shadow);
+  padding: 1.5rem;
+}
+
+.interesse-grid .txt-box h3 {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.interesse-grid .txt-box p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+
+.interesse-grid .img-box {
+  overflow: hidden;                     
+}
+
+.interesse-grid .img-box img {
+  display: block;
+  width: 100%;
+  height: 420px;                       
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 2px solid var(--accent);
+}
+
+.p2{
+  margin-top: 15px;
+}
+
+strong{
+  color: #4ea7decc;
+}
+
+i{
+  color: #4ea7decc;
 }
