@@ -85,7 +85,7 @@ nav {
 
 .logo {
   display: flex;
-  justify-content: flex-start !important;
+  justify-content: flex-start;
   padding-left: 30px;
 }
 
@@ -101,7 +101,7 @@ nav a:hover {
 /* FOOTER */
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: var(--bg-intro-end);
   color: var(--text);
@@ -122,6 +122,7 @@ nav a:hover {
   text-align: center;
   flex: 1;
   color: var(--muted);
+  max-width: 800px;
 }
 
 .footer-right {
@@ -202,6 +203,7 @@ nav a:hover {
   font-weight: 200;
   font-size: 1.3rem;
   color: var(--muted);
+  text-align: center;
 }
 
 #hero-button {
@@ -223,7 +225,7 @@ nav a:hover {
 .intro-content h2 {
   font-weight: 600;
   font-size: 40px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--accent);
 }
 
@@ -253,7 +255,7 @@ nav a:hover {
 }
 
 .box h3 {
-  font-weight: 550px;
+  font-weight: 550;
   margin-bottom: 0.7rem;
   color: var(--accent);
 }
@@ -277,6 +279,106 @@ img {
   margin-left: 6rem;
   border-radius: 6rem;
   border: 2px solid var(--accent);
+}
+
+/* MEDIA */
+
+@media (max-width: 1200px) {
+  /* Hindrer hvit stripe på høyre side */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Fikser at bilde i intro ikke skyver ut layouten */
+  .img-grid img {
+    margin-left: 0;
+  }
+
+  /* Litt mindre tekst og luft så alt passer */
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-content {
+    padding-top: 140px;
+    padding-bottom: 160px;
+  }
+}
+
+@media (max-width: 940px) {
+  /* NAV og FOOTER blir stacked */
+  nav,
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.15rem;
+  }
+
+  /* INTRO-grid → én kolonne */
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .img-grid {
+    grid-column: 1;
+    grid-row: auto;        /* avoid forced empty rows when switching to 1 column */
+    margin-top: 1.5rem;
+  }
+
+  .img-grid img {
+    margin-left: 0;
+    width: min(450px, 100% - 2rem);  /* keep some side padding on tablets */
+    height: auto;                    /* maintain aspect ratio */
+    border-radius: 1rem;
+    display: block;
+    margin-inline: auto;             /* center the image */
+  }
+}
+@media (max-width: 545px) {
+  nav,
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+  }
+  nav {
+    font-size: 0.8rem;
+  }
+  .footer-content {
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+
+  .hero h1{
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .hero p{
+    font-size: 11px;
+  }
+
+  .button{
+    padding: 0.4rem 1rem;
+  }
+
+  .intro-content h2{
+    font-size: 23px;
+  }
 }
 
 /* INTERESSER.HTML */
@@ -387,16 +489,15 @@ i {
 
 /* TIMEPLAN UNDER */
 
-#body-timeplan{
+#body-timeplan {
   background: var(--bg);
 }
 
-.timeplan h1{
-  color: var(--text);
+.timeplan h1 {
+  color: var(--accent);
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
-
 }
 th {
   border: 2px solid black;
@@ -407,14 +508,11 @@ td {
 table {
   width: 100%;
   border: 1px solid var(--accent-2);
-  
-  
 }
 .timeplan {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 70px 0; 
- 
+  padding: 70px 0;
 }
 
 td,
@@ -422,8 +520,7 @@ th {
   text-align: center;
   padding: 16px;
   width: 15%;
-  border:none;
-
+  border: none;
 }
 table {
   background: #1c2530;
@@ -445,21 +542,21 @@ table {
   background: rgb(251, 18, 18);
 }
 .IT {
-  background: aqua;
+  background: rgb(16, 128, 128);
 }
 .historie {
   background: rgba(255, 255, 0, 0.569);
 }
-.gym{
+.gym {
   background: rgb(35, 197, 143);
 }
-.fri{
+.fri {
   background: #38404a;
 }
-.friminutt{
- text-align: "center";
- background: #38404a;
+.friminutt {
+  text-align: "center";
+  background: #38404a;
 }
-.klassen{
+.klassen {
   background-color: #38404a;
 }
