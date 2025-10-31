@@ -574,13 +574,13 @@ table {
   background: #1c2530;
   color: var(--text);
 }
-.Kjemi {
+.kjemi {
   background: rgba(81, 219, 81, 0.84);
 }
 .spansk {
   background: rgba(255, 255, 0, 0.654);
 }
-.R1 {
+.r1 {
   background: rgba(70, 70, 206, 0.815);
 }
 .fysikk {
@@ -589,7 +589,7 @@ table {
 .norsk {
   background: rgb(251, 18, 18);
 }
-.IT {
+.it {
   background: rgb(16, 128, 128);
 }
 .historie {
