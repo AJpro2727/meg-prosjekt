@@ -234,6 +234,7 @@ nav a:hover {
   gap: 1rem;
   padding: 2rem;
   align-items: center;
+  max-width: 1350px;
 }
 
 .box {
@@ -298,7 +299,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 2rem 2rem;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -362,11 +363,12 @@ i {
   gap: 10px;
   overflow: hidden;
   justify-content: center;
-  margin-top: 20px;
-
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
-.bilder h1{
+.bilder h1 {
   text-align: center;
   font-size: 40px;
   font-weight: 600;
@@ -379,7 +381,85 @@ i {
   object-fit: cover;
 }
 
-.bilde-item img{
+.bilde-item img {
   border: 1px solid var(--accent);
+}
 
+/* TIMEPLAN UNDER */
+
+#body-timeplan{
+  background: var(--bg);
+}
+
+.timeplan h1{
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+
+}
+th {
+  border: 2px solid black;
+}
+td {
+  border: 1px solid black;
+}
+table {
+  width: 100%;
+  border: 1px solid var(--accent-2);
+  
+  
+}
+.timeplan {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0; 
+ 
+}
+
+td,
+th {
+  text-align: center;
+  padding: 16px;
+  width: 15%;
+  border:none;
+
+}
+table {
+  background: #1c2530;
+  color: var(--text);
+}
+.Kjemi {
+  background: rgba(81, 219, 81, 0.84);
+}
+.spansk {
+  background: rgba(255, 255, 0, 0.654);
+}
+.R1 {
+  background: rgba(70, 70, 206, 0.815);
+}
+.fysikk {
+  background: rgba(173, 11, 173, 0.786);
+}
+.norsk {
+  background: rgb(251, 18, 18);
+}
+.IT {
+  background: aqua;
+}
+.historie {
+  background: rgba(255, 255, 0, 0.569);
+}
+.gym{
+  background: rgb(35, 197, 143);
+}
+.fri{
+  background: #38404a;
+}
+.friminutt{
+ text-align: "center";
+ background: #38404a;
+}
+.klassen{
+  background-color: #38404a;
 }
