@@ -157,6 +157,40 @@ nav a:hover {
 }
 /* FOOTER END  */
 
+/* MEDIA NAV AND FOOTER */
+
+@media (max-width: 940px) {
+  nav,
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 545px) {
+  nav,
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+  }
+  nav {
+    font-size: 1rem;
+  }
+  .footer-content {
+    font-size: 0.8rem;
+    gap: 1.2rem;
+  }
+}
+/* HERO */
 .actions {
   display: flex;
   gap: 0.5rem;
@@ -284,17 +318,14 @@ img {
 /* MEDIA */
 
 @media (max-width: 1200px) {
-  /* Hindrer hvit stripe på høyre side */
   body {
     overflow-x: hidden;
   }
 
-  /* Fikser at bilde i intro ikke skyver ut layouten */
   .img-grid img {
     margin-left: 0;
   }
 
-  /* Litt mindre tekst og luft så alt passer */
   .hero h1 {
     font-size: 3.5rem;
   }
@@ -306,20 +337,6 @@ img {
 }
 
 @media (max-width: 940px) {
-  /* NAV og FOOTER blir stacked */
-  nav,
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .nav-right {
-    justify-content: center;
-    padding-right: 0;
-  }
-
   .hero h1 {
     font-size: 3rem;
   }
@@ -327,7 +344,6 @@ img {
     font-size: 1.15rem;
   }
 
-  /* INTRO-grid → én kolonne */
   .about-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -335,48 +351,33 @@ img {
 
   .img-grid {
     grid-column: 1;
-    grid-row: auto;        /* avoid forced empty rows when switching to 1 column */
+    grid-row: auto;
     margin-top: 1.5rem;
   }
 
   .img-grid img {
     margin-left: 0;
-    width: min(450px, 100% - 2rem);  /* keep some side padding on tablets */
-    height: auto;                    /* maintain aspect ratio */
+    width: min(450px, 100% - 2rem);
+    height: auto;
     border-radius: 1rem;
     display: block;
-    margin-inline: auto;             /* center the image */
+    margin-inline: auto;
   }
 }
 @media (max-width: 545px) {
-  nav,
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.3rem;
-  }
-  nav {
-    font-size: 0.8rem;
-  }
-  .footer-content {
-    font-size: 0.8rem;
-    gap: 10px;
-  }
-
-  .hero h1{
+  .hero h1 {
     font-size: 1.8rem;
     text-align: center;
   }
-  .hero p{
-    font-size: 11px;
+  .hero p {
+    font-size: 12px;
   }
 
-  .button{
-    padding: 0.4rem 1rem;
+  .button {
+    padding: 0.6rem 1rem;
   }
 
-  .intro-content h2{
+  .intro-content h2 {
     font-size: 23px;
   }
 }
@@ -395,6 +396,26 @@ img {
   color: var(--accent);
   margin-bottom: 2rem;
 }
+.interesse-grid .txt-box:nth-of-type(1) {
+  grid-area: txt1;
+}
+.interesse-grid .img-box:nth-of-type(2) {
+  grid-area: img1;
+}
+
+.interesse-grid .img-box:nth-of-type(3) {
+  grid-area: img2;
+}
+.interesse-grid .txt-box:nth-of-type(4) {
+  grid-area: txt2;
+}
+
+.interesse-grid .txt-box:nth-of-type(5) {
+  grid-area: txt3;
+}
+.interesse-grid .img-box:nth-of-type(6) {
+  grid-area: img3;
+}
 
 .interesse-grid {
   display: grid;
@@ -403,6 +424,10 @@ img {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  grid-template-areas:
+    "txt1 img1"
+    "img2 txt2"
+    "txt3 img3";
 }
 
 .interesse-grid .txt-box,
@@ -453,6 +478,20 @@ i {
   color: #4ea7decc;
 }
 
+/* MEDIA -INTERESSER */
+
+@media (max-width: 945px) {
+  .interesse-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "txt1"
+      "img1"
+      "txt2"
+      "img2"
+      "txt3"
+      "img3";
+  }
+}
 /* BILDEGALLERI.HTML */
 
 .bilder {
