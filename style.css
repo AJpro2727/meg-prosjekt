@@ -183,7 +183,7 @@ nav a:hover {
     gap: 0.6rem;
   }
   nav {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .footer-content {
     font-size: 0.8rem;
@@ -525,6 +525,15 @@ i {
 .bilde-item img {
   border: 1px solid var(--accent);
 }
+/* MEDIA */
+
+@media (max-width: 545px) {
+  .bildegalleri img{
+    width: 350px;
+    height: 350px;
+  }
+}
+
 
 /* TIMEPLAN UNDER */
 
